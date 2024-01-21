@@ -1,20 +1,16 @@
-import { Game, Platform } from '../interfaces/Game'
-import { Genre } from '../interfaces/Genre'
+import { Game, GameQuery } from '../interfaces/Game'
 import useData from './useData'
 
-function useGames(
-  selectedGenre: Genre | null,
-  selectedPlatform: Platform | null
-) {
+function useGames(gameQuery: GameQuery) {
   return useData<Game>(
     '/games',
     {
       params: {
-        genres: selectedGenre?.id,
-        parent_platforms: selectedPlatform?.id,
+        genres: gameQuery.genre?.id,
+        parent_platforms: gameQuery.platform?.id,
       },
     },
-    [selectedGenre?.id, selectedPlatform?.id]
+    [gameQuery]
   )
 }
 

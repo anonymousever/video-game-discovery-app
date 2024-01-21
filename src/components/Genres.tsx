@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react'
 import useGenres from '../hooks/useGenres'
 import getCroppedImageUrl from '../services/imageUrl'
-import { Genre } from '../interfaces/Genre'
+import { Genre } from '../interfaces/Game'
 
 interface Props {
   selectedGenre: Genre | null
