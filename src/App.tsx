@@ -23,7 +23,9 @@ function App() {
       gap="5"
     >
       <GridItem area="nav">
-        <Nav />
+        <Nav
+          onSearch={searchText => setGameQuery({ ...gameQuery, searchText })}
+        />
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" paddingInline="3">
@@ -35,7 +37,12 @@ function App() {
       </Show>
       <GridItem area="main">
         <Container maxInlineSize="71.25rem" marginInline="auto" marginBlock="5">
-          <Flex alignItems="center" gap="2" marginBlock="3">
+          <Flex
+            justifyContent={{ base: 'center', md: 'start' }}
+            alignItems="center"
+            gap="2"
+            marginBlock="3"
+          >
             <Box marginInlineStart={{ base: '0', md: '0.75rem', lg: '0' }}>
               <PlatformSelector
                 selectedPlatform={gameQuery.platform}
