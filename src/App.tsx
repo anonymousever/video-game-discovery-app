@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { Box, Container, Grid, GridItem, Show } from '@chakra-ui/react'
+import { Box, Container, Flex, Grid, GridItem, Show } from '@chakra-ui/react'
 import { GameQuery } from './interfaces/Game'
 import Nav from './components/Nav'
 import Games from './components/Games'
 import Genres from './components/Genres'
 import PlatformSelector from './components/PlatformSelector'
+import SortSelector from './components/SortSelector'
 
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery)
@@ -34,17 +35,24 @@ function App() {
       </Show>
       <GridItem area="main">
         <Container maxInlineSize="71.25rem" marginInline="auto" marginBlock="5">
-          <Box
-            marginInline={{ base: '0', md: '0.75rem', lg: '0' }}
-            marginBlock="3"
-          >
-            <PlatformSelector
-              selectedPlatform={gameQuery.platform}
-              onSelectPlatform={platform =>
-                setGameQuery({ ...gameQuery, platform })
-              }
-            />
-          </Box>
+          <Flex alignItems="center" gap="2" marginBlock="3">
+            <Box marginInlineStart={{ base: '0', md: '0.75rem', lg: '0' }}>
+              <PlatformSelector
+                selectedPlatform={gameQuery.platform}
+                onSelectPlatform={platform =>
+                  setGameQuery({ ...gameQuery, platform })
+                }
+              />
+            </Box>
+            <Box>
+              <SortSelector
+                sortOrder={gameQuery.sortOrder}
+                onSelectSortOrder={sortOrder =>
+                  setGameQuery({ ...gameQuery, sortOrder })
+                }
+              />
+            </Box>
+          </Flex>
           <Box>
             <Games gameQuery={gameQuery} />
           </Box>
