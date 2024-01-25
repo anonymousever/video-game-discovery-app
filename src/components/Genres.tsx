@@ -24,7 +24,7 @@ function Genres({ selectedGenre, onSelectGenre }: Props) {
 
   return (
     <>
-      <Heading size="md" marginBlockEnd="2">
+      <Heading as="h3" size="md" marginBlockEnd="2">
         Genres
       </Heading>
       <List>

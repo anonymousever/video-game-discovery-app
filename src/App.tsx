@@ -49,7 +49,7 @@ function App() {
               justifyContent={{ base: 'center', md: 'start' }}
               alignItems="center"
               gap="2"
-              marginBlock="5"
+              marginBlock="4"
             >
               <Box>
                 <PlatformSelector

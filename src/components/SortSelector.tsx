@@ -1,5 +1,6 @@
 import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 import { BsChevronDown } from 'react-icons/bs'
+import useData from '../hooks/useData'
 
 interface Props {
   sortOrder: string
@@ -7,6 +8,10 @@ interface Props {
 }
 
 function SortSelector({ sortOrder, onSelectSortOrder }: Props) {
+  const { error } = useData('')
+
+  if (error) return null
+
   const sortOrders = [
     { label: 'Relevance', value: '' },
     { label: 'Date Added', value: '-added' },

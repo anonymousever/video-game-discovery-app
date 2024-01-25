@@ -20,13 +20,14 @@ function Search({ onSearch }: Props) {
   return (
     <form onSubmit={handleSubmit}>
       <InputGroup>
-        <InputLeftElement pointerEvents="none">
+        <InputLeftElement pointerEvents="none" aria-label="Search">
           <FaSearch />
         </InputLeftElement>
         <Input
           type="search"
           variant="flushed"
           ref={ref}
+          aria-label="Search games"
           placeholder="Search games..."
         />
       </InputGroup>
