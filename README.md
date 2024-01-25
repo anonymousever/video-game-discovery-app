@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# Video Game Discovery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Video game discovery app is a minimal clone of the RAWG website. This app has some main features that listed below:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Show the games, platforms and critic score
+- Show the genres with selection feature
+- Sort the games based on their platforms and other related options like name, score, etc
+- Search the games based on their names
 
-## Expanding the ESLint configuration
+### Links
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Live Site](https://video-game-discovery-app-silk.vercel.app/)
 
-- Configure the top-level `parserOptions` property like this:
+## My process
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Built with
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- React
+- TypeScript
+- Chakra UI
+
+### What I learned
+
+In this challenge I tried to focus on main functions and features with pure React. So I learned common patterns like fetching data, selection, sorting, searching, etc. Also the other part was related to TypeScript. Currently I'm learning React with TypeScript and this project covers important topics of both.
+
+### Continued development
+
+This is the first version of this app with just React. I'll create another version soon that has more features like new methods for data fetching with catching option, state management, routing and overall improvement for the whole app.
+
+## Acknowledgments
+
+This challenge is part of the Mosh Hamedani’s React course and I tried it myself after reviewing the course materials. Like other repositories, this is an important reference for the future.
